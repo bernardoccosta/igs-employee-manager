@@ -1,6 +1,6 @@
 # IGS Employee Manager
 
-Esta aplicação tem como objetivo gerenciar a informação dos colaboradores, como o nome, endereço de e-mail, e departamento. Consiste em uma API feita com Django como framework e Postgres como banco de dados.
+Esta aplicação tem como objetivo gerenciar a informação dos colaboradores, como o nome, endereço de e-mail, e departamento. Consiste em uma API feita com Django e Django Rest Framework com base no [teste](https://github.com/igs-software/teste_django).
 
 ## Como rodar a aplicação?
 
@@ -22,7 +22,7 @@ docker-compose build
 docker-compose up
 ```
 
-O acesso será em: `http://localhost:8000/`
+O acesso será em: [http://localhost:8000/](http://localhost:8000/)
 
 #### Parar o container quando for necessário
 
@@ -65,7 +65,7 @@ cd IGS_Employee_Manager
 pip install -r requirements.txt
 ```
 
-O acesso será em: `http://localhost:8000/`
+O acesso será em: [http://localhost:8000/](http://localhost:8000/)
 
 ## Acesso ao banco de dados
 
@@ -91,7 +91,7 @@ docker-compose run backend python manage.py migrate
 
 ### 2) Entre com o superuser para checar o painel de administração
 
-Acesse o link em `http://localhost:8000/admin/` e acesse com o superuser para registrar ou remover novos usuários.
+Acesse o link em [http://localhost:8000/admin/](http://localhost:8000/admin/) e acesse com o superuser para registrar ou remover novos usuários.
 
 ```shell
 bernardo
@@ -114,7 +114,7 @@ docker-compose run backend python manage.py createsuperuser
 
 ## Documentação pelo Swagger:
 
-Você acessá-la em: `http://localhost:8000/swagger/`. Nela, você poderá ver as rotas GET sem autorização, mas para POST ou DELETE será necessário o login com superuser. Podendo ser o que eu criei:
+Você acessá-la em: [http://localhost:8000/swagger/](http://localhost:8000/swagger/). Nela, você poderá ver as rotas GET sem autorização, mas para POST ou DELETE será necessário o login com superuser. Podendo ser o que eu criei:
 
 ```shell
 username: bernardo
@@ -124,21 +124,21 @@ Ou que você criou.
 
 ## Documentação pelo Redoc:
 
-Você pode acessá-la em: `http://localhost:8000/redoc/` e as regras são as mesmas que com o Swagger.
+Você pode acessá-la em: [http://localhost:8000/redoc/](http://localhost:8000/redoc/) e as regras são as mesmas que com o Swagger.
 
 ## Como visualizar a aplicação?
 
 ### No navegador
 
-Você pode ir até o link para uma página HTML `http://localhost:8000/employee_list/`, que não exigirá nenhuma autenticação e você poderá ver a lista de colaboradores e as suas seções.
+Você pode ir até o link para uma página HTML [http://localhost:8000/employee_list/](http://localhost:8000/employee_list/), que não exigirá nenhuma autenticação e você poderá ver a lista de colaboradores e as suas seções.
 
 Pela aplicação ter sido feita utilizando Django Rest Framework, você também tem um bom acesso visual a API no navegador:
 
 Acesso a todos os funcionários:
-`http://localhost:8000/api/employees/`
+[http://localhost:8000/api/employees/](http://localhost:8000/api/employees/)
 
 Acesso a todos os departamentos:
-`http://localhost:8000/api/departments/`
+[http://localhost:8000/api/departments/](http://localhost:8000/api/departments/)
 
 
 ### No terminal
