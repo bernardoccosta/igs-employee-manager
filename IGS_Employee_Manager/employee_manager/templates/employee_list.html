@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Table V01</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="icon" type="image/png" href="images/icons/favicon.ico" />
+
+<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+
+<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+
+<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+
+<link rel="stylesheet" type="text/css" href="vendor/perfect-scrollbar/perfect-scrollbar.css">
+
+<link rel="stylesheet" type="text/css" href="css/util.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+
+<meta name="robots" content="noindex, follow">
+<script nonce="7adc3561-cde0-4b33-9b0c-115b10bf2415">(function(w,d){!function(bv,bw,bx,by){bv[bx]=bv[bx]||{};bv[bx].executed=[];bv.zaraz={deferred:[],listeners:[]};bv.zaraz.q=[];bv.zaraz._f=function(bz){return function(){var bA=Array.prototype.slice.call(arguments);bv.zaraz.q.push({m:bz,a:bA})}};for(const bB of["track","set","debug"])bv.zaraz[bB]=bv.zaraz._f(bB);bv.zaraz.init=()=>{var bC=bw.getElementsByTagName(by)[0],bD=bw.createElement(by),bE=bw.getElementsByTagName("title")[0];bE&&(bv[bx].t=bw.getElementsByTagName("title")[0].text);bv[bx].x=Math.random();bv[bx].w=bv.screen.width;bv[bx].h=bv.screen.height;bv[bx].j=bv.innerHeight;bv[bx].e=bv.innerWidth;bv[bx].l=bv.location.href;bv[bx].r=bw.referrer;bv[bx].k=bv.screen.colorDepth;bv[bx].n=bw.characterSet;bv[bx].o=(new Date).getTimezoneOffset();if(bv.dataLayer)for(const bI of Object.entries(Object.entries(dataLayer).reduce(((bJ,bK)=>({...bJ[1],...bK[1]})))))zaraz.set(bI[0],bI[1],{scope:"page"});bv[bx].q=[];for(;bv.zaraz.q.length;){const bL=bv.zaraz.q.shift();bv[bx].q.push(bL)}bD.defer=!0;for(const bM of[localStorage,sessionStorage])Object.keys(bM||{}).filter((bO=>bO.startsWith("_zaraz_"))).forEach((bN=>{try{bv[bx]["z_"+bN.slice(7)]=JSON.parse(bM.getItem(bN))}catch{bv[bx]["z_"+bN.slice(7)]=bM.getItem(bN)}}));bD.referrerPolicy="origin";bD.src="/cdn-cgi/zaraz/s.js?z="+btoa(encodeURIComponent(JSON.stringify(bv[bx])));bC.parentNode.insertBefore(bD,bC)};["complete","interactive"].includes(bw.readyState)?zaraz.init():bv.addEventListener("DOMContentLoaded",zaraz.init)}(w,d,"zarazData","script");})(window,document);</script></head>
+<body>
+<div class="limiter">
+<div class="container-table100">
+<div class="wrap-table100">
+<div class="table100">
+  <h1>IGS Employee Manager</h1>
+<table>
+<thead>
+<tr class="table100-head">
+	<th class="column1">Name</th>
+	<th class="column2">E-mail</th>
+	<th class="column3">Department</th>
+</tr>
+</thead>
+<tbody>
+	{% for employee in employees %}
+<tr>
+	<td class="column1">{{ employee.name }}</td>
+	<td class="column2">{{ employee.email }}</td>
+	<td class="column3">{{ employee.department }}</td>
+</tr>
+	{% endfor %}
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+
+<style>
+	@font-face {
+    font-family: OpenSans-Regular;
+    src: url(../fonts/OpenSans/OpenSans-Regular.ttf)
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+body,html {
+    height: 100%;
+    font-family: sans-serif
+}
+
+a {
+    margin: 0;
+    transition: all .4s;
+    -webkit-transition: all .4s;
+    -o-transition: all .4s;
+    -moz-transition: all .4s
+}
+
+a:focus {
+    outline: none!important
+}
+
+a:hover {
+    text-decoration: none
+}
+
+h1 {
+  text-align: center;
+  font-weight: 900;
+  color: whitesmoke;
+  margin: 1rem;
+}
+
+p {
+    margin: 0
+}
+
+ul,li {
+    margin: 0;
+    list-style-type: none
+}
+
+input {
+    display: block;
+    outline: none;
+    border: none!important
+}
+
+textarea {
+    display: block;
+    outline: none
+}
+
+textarea:focus,input:focus {
+    border-color: transparent!important
+}
+
+button {
+    outline: none!important;
+    border: none;
+    background: 0 0
+}
+
+button:hover {
+    cursor: pointer
+}
+
+iframe {
+    border: none!important
+}
+
+.limiter {
+    width: 100%;
+    margin: 0 auto
+}
+
+.container-table100 {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('https://www.igs-software.com.br/img/header-inicio.png');
+    /* background: #c850c0;
+    background: -webkit-linear-gradient(45deg,#4158d0,#c850c0);
+    background: -o-linear-gradient(45deg,#4158d0,#c850c0);
+    background: -moz-linear-gradient(45deg,#4158d0,#c850c0);
+    background: linear-gradient(45deg,#4158d0,#c850c0); */
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 33px 30px
+}
+
+.wrap-table100 {
+    width: 1170px
+}
+
+table {
+    border-spacing: 1;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+    position: relative
+}
+
+table * {
+    position: relative
+}
+
+table td,table th {
+    padding-left: 8px
+}
+
+table thead tr {
+    height: 60px;
+    background: #36304a
+}
+
+table tbody tr {
+    height: 50px
+}
+
+table tbody tr:last-child {
+    border: 0
+}
+
+table td,table th {
+    text-align: left
+}
+
+table td.l,table th.l {
+    text-align: right
+}
+
+table td.c,table th.c {
+    text-align: center
+}
+
+table td.r,table th.r {
+    text-align: center
+}
+
+.table100-head th {
+    font-family: OpenSans-Regular;
+    font-size: 18px;
+    color: #fff;
+    line-height: 1.2;
+    font-weight: unset
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f5f5f5
+}
+
+tbody tr {
+    font-family: OpenSans-Regular;
+    font-size: 15px;
+    color: gray;
+    line-height: 1.2;
+    font-weight: unset
+}
+
+tbody tr:hover {
+    color: #555;
+    background-color: #f5f5f5;
+    cursor: pointer
+}
+
+.column1 {
+    width: 260px;
+    padding-left: 40px
+}
+
+.column2 {
+    width: 160px
+}
+
+.column3 {
+    width: 245px
+}
+
+.column4 {
+    width: 110px;
+    text-align: right
+}
+
+.column5 {
+    width: 170px;
+    text-align: right
+}
+
+.column6 {
+    width: 222px;
+    text-align: right;
+    padding-right: 62px
+}
+
+@media screen and (max-width: 992px) {
+    table {
+        display:block
+    }
+
+    table>*,table tr,table td,table th {
+        display: block
+    }
+
+    table thead {
+        display: none
+    }
+
+    table tbody tr {
+        height: auto;
+        padding: 37px 0
+    }
+
+    table tbody tr td {
+        padding-left: 40%!important;
+        margin-bottom: 24px
+    }
+
+    table tbody tr td:last-child {
+        margin-bottom: 0
+    }
+
+    table tbody tr td:before {
+        font-family: OpenSans-Regular;
+        font-size: 14px;
+        color: #999;
+        line-height: 1.2;
+        font-weight: unset;
+        position: absolute;
+        width: 40%;
+        left: 30px;
+        top: 0
+    }
+
+    table tbody tr td:nth-child(1):before {
+        content: "Date"
+    }
+
+    table tbody tr td:nth-child(2):before {
+        content: "Order ID"
+    }
+
+    table tbody tr td:nth-child(3):before {
+        content: "Name"
+    }
+
+    table tbody tr td:nth-child(4):before {
+        content: "Price"
+    }
+
+    table tbody tr td:nth-child(5):before {
+        content: "Quantity"
+    }
+
+    table tbody tr td:nth-child(6):before {
+        content: "Total"
+    }
+
+    .column4,.column5,.column6 {
+        text-align: left
+    }
+
+    .column4,.column5,.column6,.column1,.column2,.column3 {
+        width: 100%
+    }
+
+    tbody tr {
+        font-size: 14px
+    }
+}
+
+@media(max-width: 576px) {
+    .container-table100 {
+        padding-left:15px;
+        padding-right: 15px
+    }
+}
+
+</style>
+
+<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+
+<script src="vendor/bootstrap/js/popper.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+<script src="vendor/select2/select2.min.js"></script>
+
+<script src="js/main.js"></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-23581568-13');
+	</script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vb26e4fa9e5134444860be286fd8771851679335129114" integrity="sha512-M3hN/6cva/SjwrOtyXeUa5IuCT0sedyfT+jK/OV+s+D0RnzrTfwjwJHhd+wYfMm9HJSrZ1IKksOdddLuN6KOzw==" data-cf-beacon='{"rayId":"7b0248189e81117e","token":"cd0b4b3a733644fc843ef0b185f98241","version":"2023.3.0","si":100}' crossorigin="anonymous"></script>
+</body>
+</html>
