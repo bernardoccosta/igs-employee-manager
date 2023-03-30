@@ -149,7 +149,7 @@ Você pode acessar essa mesma lista utilizando o comando:
 curl -H "Content-Type: application/javascript" http://localhost:8000/api/employees/
 ```
 
-```shell
+```json
 [
   {
     "name": "Jose da Silva",
@@ -175,7 +175,7 @@ Ou pode visualizar os departamentos e seus colaboradores com:
 curl -H "Content-Type: application/javascript" http://localhost:8000/api/departments/
 ```
 
-```shell
+```json
 {
     "departments": [
         {
@@ -229,8 +229,10 @@ curl -X POST -d "username=bernardo&password=pythonandonaigs" http://localhost:80
 
 O que tenho como retorno é um token que precisarei utilizar na header das requisições:
 
-```shell
-{"token":"3e13c1575911981cd091db7134bf56bef4391ded"}
+```json
+{
+  "token":"3e13c1575911981cd091db7134bf56bef4391ded"
+}
 ```
 
 Antes de adicionar um colaborador, é necessário que o departamento já exista para utilizarmos o seu ID. Por isso, criarei um novo departamento:
@@ -241,7 +243,7 @@ curl -X POST -H "Content-Type: application/json" -H "Authorization: Token 3e13c1
 
 Como retorno, eu tive: 
 
-```shell
+```json
 {
   "id":4,
   "name":"Marketing"
@@ -256,7 +258,7 @@ curl -X POST -H "Content-Type: application/json" -H "Authorization: Token 3e13c1
 
 E se tudo estiver correto, esta será a minha resposta:
 
-```shell
+```json
 {
   "id":4,
   "department":4,
