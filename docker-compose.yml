@@ -1,0 +1,13 @@
+version: '3.9'
+
+services:
+  backend: 
+    build: 
+      context: ./IGS_Employee_Manager
+      dockerfile: Dockerfile
+
+    ports:
+      - '8000:8000'
+
+    volumes:
+      - ./IGS_Employee_Manager:/app/IGS_Employee_Manager
